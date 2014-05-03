@@ -1,6 +1,108 @@
 from SATSolver import testKb, testLiteral
 
 
+def questionOne():
+    clauses = [[-1,2],[3],[4]]
+
+    print 'Knowledge base is satisfiable:',testKb(clauses)
+    
+    print 'Is the Unicorn Mythical?',
+    result = testLiteral(1,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
+    print 'Is the Unicorn Magical?',
+    result = testLiteral(3,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
+
+    print 'Is the Unicorn Horned?',
+    result = testLiteral(4,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
+
+
+def questionTwo():
+    clauses = [[-1,2],[-2,3],[3,2],[2],[-1,2,-3],[1,3],[-2,3],[1],[-2]]
+
+    print 'Knowledge base is satisfiable:',testKb(clauses)
+
+    print 'Is Amy truthful?',
+    result = testLiteral(1,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
+    print 'Is Bob truthful?',
+    result = testLiteral(2,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
+
+    print 'Is Cal truthful',
+    result = testLiteral(3,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
+def questionThree():
+    clauses = [[-1,4],[-4,1],[1,-4],[4,-1],[-3,4],[-4,3],[3,-4],
+    		   [4,-3],[-5,-6],[6,-5],[5,6],[-6,-5],[2,4,6]]
+
+    print 'Knowledge base is satisfiable:',testKb(clauses)
+
+    print 'Caterpillar ate the salt',
+    result = testLiteral(2,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
+    print 'Bill ate the salt',
+    result = testLiteral(4,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
+
+    print 'Chester ate the salt',
+    result = testLiteral(6,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
 def liarsAnonymous():
 	clauses = [[-1,8],[-1,9],[-8,-9,1],
 			   [-2,1],[-2,12],[-1,-12,2],
@@ -139,6 +241,9 @@ def liarsAnonymous():
 
 
 def main():
+	questionOne()
+    questionTwo()
+    questionThree()
 	liarsAnonymous()
 
 if __name__ == "__main__":
