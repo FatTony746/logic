@@ -37,7 +37,7 @@ def questionOne():
 
 
 def questionTwo():
-    clauses = [[-1,2],[-2,3],[3,2],[2],[-1,2,-3],[1,3],[-2,3],[1],[-2]]
+    clauses = [[-1,3],[-1,1],[-3,-1,1],[-2,-3],[2,3],[-3,2,-1],[-2,3],[1,3]]
 
     print 'Knowledge base is satisfiable:',testKb(clauses)
 
@@ -60,7 +60,7 @@ def questionTwo():
         print 'Unknown.'
 
 
-    print 'Is Cal truthful',
+    print 'Is Cal truthful?',
     result = testLiteral(3,clauses)
     if result == True:
         print 'Yes.'
