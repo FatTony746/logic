@@ -242,8 +242,11 @@ def liarsAnonymous():
 
 def main():
     questionOne()
+    print "-"*80
     questionTwo()
+    print "-"*80
     questionThree()
+    print "-"*80
     liarsAnonymous()
 
 if __name__ == "__main__":
