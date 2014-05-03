@@ -1,7 +1,7 @@
 from SATSolver import testKb, testLiteral
 
 
-def questionOne():
+def unicornProblem():
     clauses = [[-1,2],[3],[4]]
 
     print 'Knowledge base is satisfiable:',testKb(clauses)
@@ -36,7 +36,7 @@ def questionOne():
 
 
 
-def questionTwo():
+def truthTellers():
     clauses = [[-1,3],[-1,1],[-3,-1,1],[-2,-3],[2,3],[-3,2,-1],[-2,3],[1,3]]
 
     print 'Knowledge base is satisfiable:',testKb(clauses)
@@ -69,9 +69,9 @@ def questionTwo():
     else:
         print 'Unknown.'
 
-def questionThree():
+def saltRobbery():
     clauses = [[-1,4],[-4,1],[1,-4],[4,-1],[-3,4],[-4,3],[3,-4],
-               [4,-3],[-5,-6],[6,-5],[5,6],[-6,-5],[2,4,6]]
+               [4,-3],[-5,-6],[6,-5],[5,6],[-6,-5],[2,4,6],[1,3,5]]
 
     print 'Knowledge base is satisfiable:',testKb(clauses)
 
@@ -241,11 +241,11 @@ def liarsAnonymous():
 
 
 def main():
-    questionOne()
+    unicornProblem()
     print "-"*80
-    questionTwo()
+    truthTellers()
     print "-"*80
-    questionThree()
+    saltRobbery()
     print "-"*80
     liarsAnonymous()
 
