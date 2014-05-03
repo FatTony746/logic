@@ -1,3 +1,7 @@
+'''
+Authored by Miles Douglas and Tony Tran
+'''
+
 from SATSolver import testKb, testLiteral
 
 
@@ -71,7 +75,7 @@ def truthTellers():
 
 def saltRobbery():
     clauses = [[-1,4],[-4,1],[1,-4],[4,-1],[-3,4],[-4,3],[3,-4],
-               [4,-3],[-5,-6],[6,-5],[5,6],[-6,-5],[2,4,6],[1,3,5]]
+               [4,-3],[-5,-6],[6,-5],[5,6],[-6,-5],[2,4,6],[1,3,5],[-1,-3,-5]]
 
     print 'Knowledge base is satisfiable:',testKb(clauses)
 
