@@ -83,7 +83,16 @@ def saltRobbery():
 
     print 'Knowledge base is satisfiable:',testKb(clauses)
 
-    print 'Caterpillar ate the salt',
+	print 'Caterpillar telling the truth?',
+    result = testLiteral(1,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
+    print 'Caterpillar ate the salt?',
     result = testLiteral(2,clauses)
     if result == True:
         print 'Yes.'
@@ -92,7 +101,16 @@ def saltRobbery():
     else:
         print 'Unknown.'
 
-    print 'Bill ate the salt',
+	print 'Bill telling the truth?',
+    result = testLiteral(3,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
+
+    print 'Bill ate the salt?',
     result = testLiteral(4,clauses)
     if result == True:
         print 'Yes.'
@@ -101,8 +119,16 @@ def saltRobbery():
     else:
         print 'Unknown.'
 
+	print 'Chester Telling the truth?',
+    result = testLiteral(5,clauses)
+    if result == True:
+        print 'Yes.'
+    elif result == False:
+        print 'No.'
+    else:
+        print 'Unknown.'
 
-    print 'Chester ate the salt',
+    print 'Chester ate the salt?',
     result = testLiteral(6,clauses)
     if result == True:
         print 'Yes.'
