@@ -77,13 +77,13 @@ def saltRobbery():
     # clauses = [[-1,4],[-4,1],[1,-4],[4,-1],[-3,4],[-4,3],[3,-4],
     #            [4,-3],[-5,-6],[6,-5],[5,6],[-6,-5],[2,4,6],[1,3,5],[-1,-3,-5]]
     clauses = [[-1,4],[-1,-6],[-1,-2],[1,2,-4,6],
-    		   [-3,4],[-3,-6],[-3,-2],[2,3,-4,6],
-    		   [-5,-6],[2,-5,-6],[2,4,5],[2,5,6],[2,4,5],
-    		   [1,3,5],[-1,-3,-5]]
+               [-3,4],[-3,-6],[-3,-2],[2,3,-4,6],
+               [-5,-6],[2,-5,-6],[2,4,5],[2,5,6],[2,4,5],
+               [1,3,5],[-1,-3,-5]]
 
     print 'Knowledge base is satisfiable:',testKb(clauses)
 
-	print 'Caterpillar telling the truth?',
+    print 'Caterpillar telling the truth?',
     result = testLiteral(1,clauses)
     if result == True:
         print 'Yes.'
@@ -101,7 +101,7 @@ def saltRobbery():
     else:
         print 'Unknown.'
 
-	print 'Bill telling the truth?',
+    print 'Bill telling the truth?',
     result = testLiteral(3,clauses)
     if result == True:
         print 'Yes.'
@@ -119,7 +119,7 @@ def saltRobbery():
     else:
         print 'Unknown.'
 
-	print 'Chester Telling the truth?',
+    print 'Chester Telling the truth?',
     result = testLiteral(5,clauses)
     if result == True:
         print 'Yes.'
